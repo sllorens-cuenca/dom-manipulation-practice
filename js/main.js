@@ -14,7 +14,7 @@ const infoElementsArr = [...infoCollection] // convert html collection to an arr
 
 console.log(infoCollection)
 
-infoElementsArr.forEach( function(element) {
+infoElementsArr.forEach(function (element) {
     //element.innerText = "THIS IS THE NEW CONTENT"
     element.style.color = "blue"
 });
@@ -41,3 +41,4 @@ const all = document.querySelectorAll("header h2")
 all.forEach((element) => {
     element.style.color = "gray"
 })
+
