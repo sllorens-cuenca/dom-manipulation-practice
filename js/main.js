@@ -168,3 +168,12 @@ btn2.addEventListener("click", () => {
     const parentElm = document.getElementById("box-2")
     parentElm.appendChild(newParagraph)
 })
+
+
+const allBtn = document.querySelectorAll(".btn")
+
+allBtn.forEach( (btnElement) => {
+    btnElement.addEventListener("click", () => {
+        console.log("click on button")
+    })
+})
