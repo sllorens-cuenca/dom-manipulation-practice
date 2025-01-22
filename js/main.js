@@ -96,3 +96,75 @@ linkElm.setAttribute("href", "https://ironhack.com")
 linkElm.setAttribute("target", "_blank")
 
 //remove elm.removeAttribute(attrName)
+
+
+// Create a DOM node
+
+
+//Step 1 create the element
+const newImg = document.createElement("img")
+
+//Step2 add content or modify
+newImg.setAttribute("src", "./images/pikachu.jpg")
+newImg.setAttribute("alt", "pikachu image")
+
+//step 3 append to the dom: parentElm.appendChild()
+
+const parentElm = document.getElementById("pikachu")
+parentElm.appendChild(newImg)
+
+
+
+//Events
+
+/*
+mouse events: click, mouseover
+keyboard events: keydown, keypres, keyup
+document: domContentLoad
+...
+
+elm.addEventListener(typeOfEvent, code)
+
+*/
+
+
+const btn = document.getElementById("button-1")
+
+// btn.onclick = function () {
+//     alert("hello world")
+// }
+
+btn.addEventListener("click", () => {
+    console.log("user clicked")
+})
+
+
+//example 2 append a paragraph every time clicked
+
+
+const btn2 = document.getElementById("button-2")
+
+// function attachElements (htmlTagg){
+//     const newParagraph = document.createElement(htmlTagg)
+
+//     //Step2 add content or modify
+//     newParagraph.innerText = "Hello World"
+
+//     //step 3 append to the dom: parentElm.appendChild()
+
+//     const parentElm = document.getElementById("box-2")
+//     parentElm.appendChild(newParagraph)
+// }
+// btn2.addEventListener("click", attachElements("p"))
+
+btn2.addEventListener("click", () => {
+    const newParagraph = document.createElement("p")
+
+    //Step2 add content or modify
+    newParagraph.innerText = "Hello World"
+
+    //step 3 append to the dom: parentElm.appendChild()
+
+    const parentElm = document.getElementById("box-2")
+    parentElm.appendChild(newParagraph)
+})
